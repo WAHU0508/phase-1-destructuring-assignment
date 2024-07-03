@@ -1,7 +1,23 @@
+//1: destructure strings
 const farmAnimals = 'cow horse sheep pig chicken';
+//Call them by the sound they make
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ')
+//Horse wandered off
+const [bessie, ,dolly, babe, little] = farmAnimals.split(' ')
+//Little chicken had to go back to the coop
+const [blackAndWhite, ,black,pink, ] = farmAnimals.split(' ')
 
+
+//Destructuring Arrays
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//Color names
+const [red, orange, yellow, green, blue, indigo, violet] = colors
+//Leave out indigo
+const [r, o, y, g, b, , v] = colors
+//Add indigo
+const [ , , , , , indg, ] = colors
 
+//3: destructure objects
 const muppet = {
   muppetName: 'Miss Piggy',
   color: 'pink',
@@ -9,7 +25,9 @@ const muppet = {
   job: 'Cast member of The Muppet Show',
   partner: 'Kermit'
 };
+const {muppetName, color, song, job, partner} = muppet;
 
+//4: Destructure nested objects
 const nestedMuppet = {
   nestedName: 'Kermit',
   nestedColor: 'green',
@@ -25,6 +43,9 @@ const nestedMuppet = {
   nestedPartner: 'Miss Piggy'
 };
 
+const {song2, song4} = nestedMuppet.album.theMuppetMovie
+const {nestedJob, nestedPartner} = nestedMuppet
+console.log(song2)
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
