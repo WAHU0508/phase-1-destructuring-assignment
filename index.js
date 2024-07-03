@@ -45,7 +45,6 @@ const nestedMuppet = {
 
 const {song2, song4} = nestedMuppet.album.theMuppetMovie
 const {nestedJob, nestedPartner} = nestedMuppet
-console.log(song2)
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
